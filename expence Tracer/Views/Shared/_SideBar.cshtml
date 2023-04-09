@@ -1,0 +1,63 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    List<Object> menuItems = new List<Object>();
+
+    menuItems.Add(new
+    {
+        text = "General",
+        seperater = true,
+    });
+    menuItems.Add(new
+    {
+        text = "Dashboard",
+        url = "/",
+        iconCss="fa-solid fa-box",
+    });
+    menuItems.Add(new
+    {
+        text = "Categorys",
+        iconCss = "fa-solid fa-folder-open",
+        url = "/Category"
+    });
+    menuItems.Add(new
+    {
+        text = "Transactions",
+        iconCss = "fa-solid fa-arrow-right-arrow-left",
+        url = "/Transaction"
+    });
+}
+
+<ejs-sidebar id="sidebar" width="290px" enableDock
+            target=".dock-target" enableGestures="false">
+    <e-content-template>
+
+        
+           
+            <div class="w-100"></div>
+            <i id="sidebar-toggler" class="fa-solid"></i>
+        
+        <div class="profile-wrapper">
+            <img  class="profile-pic" src="~/profile.jpeg" />
+            <div class="tittle d-flex flex-column ps-3">
+                <h6 class="mb-0">Hesabini tut</h6>
+                <span class="text-muted">Farhad qurishy</span>
+            </div>
+        </div>
+        <ejs-menu id="menu" items="menuItems"
+        orientation="Vertical"
+        hamburgerMode></ejs-menu>
+    </e-content-template>
+</ejs-sidebar>
+
+<script>
+    document.addEventListener('DOMContentLoaded',function (){
+        dockBar = document.getElementById('sidebar').ej2_instances[0];
+        document.getElementById('sidebar-toggler').onclick = function () {
+            dockBar.toggle();
+        };
+    });
+
+</script>
+
