@@ -14,20 +14,24 @@
     <script src="https://cdn.syncfusion.com/ej2/20.4.48/dist/ej2.min.js"></script>
 </head>
 <body class="e-bigger">
-   
-    <Partial name="_SideBar"/>
+
+    <Partial name="_SideBar" />
     <header>
         <nav class="navbar sticky-top">
-            <div class="container-fluid py-2 px-4">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <div>
-                    <i class="fa-solid fa-bell"></i>
-                    <i class="fa-solid fa-message"></i>
-                    <img class="profile-pic" src="~/profile.jpeg" />
+            <div class="container-fluid py-2 px-4 d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-magnifying-glass me-3"></i>
+                    <i class="fa-solid fa-bell me-3"></i>
+                    <i class="fa-solid fa-message me-3"></i>
+                </div>
+                <div class="d-flex align-items-center">
+                    @* Add your login and register buttons here *@
+                    <Partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="main-content">
         <div class="container mt-5">
             <div class="row justify-content-center">

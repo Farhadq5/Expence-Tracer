@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("expence Tracer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a720f333f187814ceba60bd1b1d7c1c341085bfc")]
 [assembly: System.Reflection.AssemblyProductAttribute("expence Tracer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("expence Tracer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -24,7 +24,7 @@ namespace expence_Tracer.Controllers
         // GET: Transaction/AddOrEdit
         public IActionResult AddOrEdit(int id = 0)
         {
-            PopulateCategorys();
+            PopulateCategories();
             if (id == 0)
                 return View(new Transaction());
             else
@@ -47,7 +47,7 @@ namespace expence_Tracer.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            PopulateCategorys();
+            PopulateCategories();
             return View(transaction);
         }
 
@@ -76,12 +76,12 @@ namespace expence_Tracer.Controllers
 
         [NonAction]
 
-        public void PopulateCategorys()
+        public void PopulateCategories()
         {
-            var CategoryCollection = _context.Categorys.ToList();
+            var CategoryCollection = _context.Categories.ToList();
             Category DefaultCategory = new() { CategoryId = 0, Title = "Choose a Category" };
             CategoryCollection.Insert(0, DefaultCategory);
-            ViewBag.Categorys = CategoryCollection;
+            ViewBag.Categories = CategoryCollection;
         }
 
     }

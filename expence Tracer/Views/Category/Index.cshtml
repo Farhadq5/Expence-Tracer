@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<expence_Tracer.Models.Category>
 
 @{
-    ViewData["PageTitle"] = "Categorys";
+    ViewData["PageTitle"] = "Categories";
     ViewData["PageActionText"] = "+ New Category";
     ViewData["PageActionUrl"] = "/Category/AddOrEdit";
 }
@@ -9,7 +9,7 @@
 
 <div class="row">
     <div class="col-md-7">
-        <ejs-grid id="categorys" dataSource="@Model" gridLines="None"
+        <ejs-grid id="Categories" dataSource="@Model" gridLines="None"
             allowsorting="true" allowPaging="true" >
             <e-grid-pagesettings pageSize="6"></e-grid-pagesettings>
             <e-grid-columns>

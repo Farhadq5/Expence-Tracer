@@ -46,7 +46,7 @@ namespace expence_Tracer.Migrations
 
                     b.HasKey("CategoryId");
 
-                    b.ToTable("Categorys");
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("expence_Tracer.Models.Transaction", b =>

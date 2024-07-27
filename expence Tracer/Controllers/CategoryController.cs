@@ -16,9 +16,9 @@ namespace expence_Tracer.Controllers
         // GET: Category
         public async Task<IActionResult> Index()
         {
-            return _context.Categorys != null ?
-                        View(await _context.Categorys.ToListAsync()) :
-                        Problem("Entity set 'ApplicationDbContext.Categorys'  is null.");
+            return _context.Categories != null ?
+                        View(await _context.Categories.ToListAsync()) :
+                        Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
         }
 
 
@@ -29,7 +29,7 @@ namespace expence_Tracer.Controllers
             if (id == 0)
                 return View(new Category());
             else
-                return View(_context.Categorys.Find(id));
+                return View(_context.Categories.Find(id));
 
         }
 
@@ -66,14 +66,14 @@ namespace expence_Tracer.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Categorys == null)
+            if (_context.Categories == null)
             {
-                return Problem("Entity set 'ApplicationDbContext.Categorys'  is null.");
+                return Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
             }
-            var category = await _context.Categorys.FindAsync(id);
+            var category = await _context.Categories.FindAsync(id);
             if (category != null)
             {
-                _context.Categorys.Remove(category);
+                _context.Categories.Remove(category);
             }
 
             await _context.SaveChangesAsync();
